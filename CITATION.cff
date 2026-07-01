@@ -1,0 +1,82 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Hindsight: Similarity-Based Analytics for Mars Rover Drive Retrieval"
+version: 1.0.0
+date-released: 2026-07-01
+license: MIT
+repository-code: https://github.com/fiorante/hindsight
+authors:
+  - family-names: Fiorante
+    given-names: Luke
+    affiliation: Harvard University
+  - family-names: Liu
+    given-names: Leslie
+    affiliation: Carnegie Mellon University
+  - family-names: Xu
+    given-names: Adam
+    affiliation: ArtCenter College of Design
+  - family-names: Lei
+    given-names: Xianmei
+    affiliation: NASA Jet Propulsion Laboratory
+  - family-names: Chiu
+    given-names: Darwin
+    affiliation: NASA Jet Propulsion Laboratory
+  - family-names: Blackwood
+    given-names: Krys
+    affiliation: NASA Jet Propulsion Laboratory
+  - family-names: Hendrie
+    given-names: Maggie
+    affiliation: ArtCenter College of Design
+  - family-names: Davidoff
+    given-names: Scott
+    affiliation: Space Science Institute
+  - family-names: Lombeyda
+    given-names: Santiago V.
+    affiliation: California Institute of Technology
+  - family-names: Mushkin
+    given-names: Hillary
+    affiliation: California Institute of Technology
+keywords:
+  - Mars 2020
+  - Perseverance
+  - rover
+  - drive telemetry
+  - planetary science
+  - data visualization
+  - similarity search
+  - NASA Jet Propulsion Laboratory
+preferred-citation:
+  type: conference-paper
+  title: "Hindsight: Similarity-Based Analytics for Mars Rover Drive Retrieval"
+  authors:
+    - family-names: Fiorante
+      given-names: Luke
+      affiliation: Harvard University
+    - family-names: Liu
+      given-names: Leslie
+      affiliation: Carnegie Mellon University
+    - family-names: Xu
+      given-names: Adam
+      affiliation: ArtCenter College of Design
+    - family-names: Lei
+      given-names: Xianmei
+      affiliation: NASA Jet Propulsion Laboratory
+    - family-names: Chiu
+      given-names: Darwin
+      affiliation: NASA Jet Propulsion Laboratory
+    - family-names: Blackwood
+      given-names: Krys
+      affiliation: NASA Jet Propulsion Laboratory
+    - family-names: Hendrie
+      given-names: Maggie
+      affiliation: ArtCenter College of Design
+    - family-names: Davidoff
+      given-names: Scott
+      affiliation: Space Science Institute
+    - family-names: Lombeyda
+      given-names: Santiago V.
+      affiliation: California Institute of Technology
+    - family-names: Mushkin
+      given-names: Hillary
+      affiliation: California Institute of Technology
+  year: 2026

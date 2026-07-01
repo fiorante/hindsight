@@ -1,0 +1,41 @@
+{
+  "title": "Hindsight: Similarity-Based Analytics for Mars Rover Drive Retrieval",
+  "description": "Hindsight is a web-based platform for searching and analyzing Mars rover drive data from the Mars 2020 Perseverance mission. This repository accompanies the paper of the same name and provides the full source code for the platform, including a FastAPI backend, React frontend, similarity search algorithms (DTW and k-NN), and an ingestion pipeline for NASA PDS telemetry data. The companion dataset (map tiles, imagery, and telemetry) is archived separately on Zenodo at https://doi.org/10.5281/zenodo.21094815.",
+  "license": "MIT",
+  "version": "1.0.0",
+  "creators": [
+    { "name": "Fiorante, Luke", "affiliation": "Harvard University" },
+    { "name": "Liu, Leslie", "affiliation": "Carnegie Mellon University" },
+    { "name": "Xu, Adam", "affiliation": "ArtCenter College of Design" },
+    { "name": "Lei, Xianmei", "affiliation": "NASA Jet Propulsion Laboratory" },
+    { "name": "Chiu, Darwin", "affiliation": "NASA Jet Propulsion Laboratory" },
+    { "name": "Blackwood, Krys", "affiliation": "NASA Jet Propulsion Laboratory" },
+    { "name": "Hendrie, Maggie", "affiliation": "ArtCenter College of Design" },
+    { "name": "Davidoff, Scott", "affiliation": "Space Science Institute" },
+    { "name": "Lombeyda, Santiago V.", "affiliation": "California Institute of Technology" },
+    { "name": "Mushkin, Hillary", "affiliation": "California Institute of Technology" }
+  ],
+  "keywords": [
+    "Mars 2020",
+    "Perseverance",
+    "rover",
+    "drive telemetry",
+    "planetary science",
+    "data visualization",
+    "similarity search",
+    "NASA Jet Propulsion Laboratory"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.21094815",
+      "relation": "isSupplementedBy",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/fiorante/hindsight",
+      "relation": "isSupplementedBy",
+      "scheme": "url"
+    }
+  ],
+  "upload_type": "software"
+}
