@@ -1,0 +1,378 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Leaflet CSS */
+@import 'leaflet/dist/leaflet.css';
+
+/* Single source of truth for the unified fault red.
+   - Tailwind's `bg-stellar-fault-red`/`bg-stellar-error` resolve to var(--fault-red).
+   - JS code reads the matching FAULT_RED constant from drivePresentation.ts.
+   - Change in both places to update the unified red everywhere. */
+:root {
+  --fault-red: #d23737;
+}
+
+/* Fix tile gaps in Mars map */
+.mars-tile-layer img {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+/* Fix Recharts selection border and tooltip styling */
+.recharts-responsive-container:active {
+  cursor: grabbing;
+}
+
+/* Disable browser selection highlighting on Recharts */
+.recharts-responsive-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: grab;
+}
+
+.recharts-responsive-container:active {
+  cursor: grabbing;
+}
+
+/* Prevent any selection highlighting on Recharts and related elements */
+.recharts-wrapper,
+.recharts-responsive-container,
+.recharts-wrapper *,
+.recharts-responsive-container *,
+.recharts-tooltip-wrapper,
+.recharts-tooltip-wrapper *,
+.recharts-tooltip,
+.recharts-tooltip * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+  outline: none !important;
+}
+
+/* Ensure Recharts components have proper cursor styling - make this more specific */
+.recharts-wrapper,
+.recharts-responsive-container {
+  cursor: grab !important;
+}
+
+.recharts-wrapper:active,
+.recharts-responsive-container:active {
+  cursor: grabbing !important;
+}
+
+/* Override any child element cursor styles */
+.recharts-wrapper *,
+.recharts-responsive-container * {
+  cursor: inherit !important;
+}
+
+/* Ensure specific Recharts elements inherit the grab cursor */
+.recharts-wrapper svg,
+.recharts-responsive-container svg,
+.recharts-wrapper div,
+.recharts-responsive-container div {
+  cursor: grab !important;
+}
+
+.recharts-wrapper:active svg,
+.recharts-responsive-container:active svg,
+.recharts-wrapper:active div,
+.recharts-responsive-container:active div {
+  cursor: grabbing !important;
+}
+
+/* Make Recharts tooltip cursor line white and only visible during drag */
+.recharts-tooltip-cursor {
+  stroke: #ffffff !important;
+  stroke-width: 2 !important;
+  stroke-opacity: 0.9 !important;
+}
+
+/* Hide tooltip cursor by default, only show during drag */
+.recharts-tooltip-cursor {
+  opacity: 0 !important;
+}
+
+/* Show tooltip cursor only when dragging */
+.recharts-responsive-container:active .recharts-tooltip-cursor,
+.recharts-wrapper:active .recharts-tooltip-cursor {
+  opacity: 1 !important;
+}
+
+/* Filled path segments now handle clicks for playhead positioning */
+.filled-path-segment {
+  /* Keep default pointer events to allow click handling */
+}
+
+/* Cursor styles for map drive interactions */
+.focused-drive-path {
+  cursor: grab;
+}
+
+.focused-drive-path:active {
+  cursor: grabbing;
+}
+
+.leaflet-tile {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure UI elements appear above map tiles */
+.leaflet-container {
+  z-index: 1 !important;
+  /* Suppress any default browser/Leaflet border so the map sits flush against
+     its container without a thin white rectangle outlining the viewport. */
+  outline: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Some browsers/Leaflet builds add a focus outline on the map div when it
+   gains keyboard focus — kill it so it doesn't render as a white rectangle. */
+.leaflet-container:focus,
+.leaflet-container:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.leaflet-pane {
+  z-index: 1 !important;
+}
+
+.leaflet-overlay-pane {
+  z-index: 2 !important;
+}
+
+/* Completely hide Leaflet attribution */
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+/* UI elements should have higher z-index */
+.map-ui-overlay {
+  z-index: 9999 !important;
+  position: relative;
+}
+
+/* Specific class for map info panels */
+.map-info-panel {
+  z-index: 9999 !important;
+  position: absolute;
+}
+
+/* Cursor pointer for clickable paths */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+/* GoldenLayout modernized header/tabs — Stellar design system */
+.lm_goldenlayout .lm_header {
+  background-color: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  height: 40px;
+  /* Ensure header and its dropdowns render above content like Leaflet map */
+  position: relative;
+}
+
+/* Leaflet zoom controls dark mode */
+.dark .leaflet-control-zoom a {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #475569 !important;
+}
+
+.dark .leaflet-control-zoom a:hover {
+  background-color: #475569 !important;
+  color: #ffffff !important;
+}
+
+.dark .leaflet-control-zoom-in,
+.dark .leaflet-control-zoom-out {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #475569 !important;
+}
+
+.dark .leaflet-control-zoom-in:hover,
+.dark .leaflet-control-zoom-out:hover {
+  background-color: #475569 !important;
+  color: #ffffff !important;
+}
+
+/* Dark mode for GoldenLayout headers */
+.dark .lm_goldenlayout .lm_header {
+  background-color: #020817;
+  border-bottom: 1px solid #1e293b;
+}
+
+.lm_goldenlayout .lm_header .lm_tabs {
+  padding: 4px 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+}
+
+.lm_goldenlayout .lm_header .lm_tab {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-bottom: 0;
+  margin: 0 4px;
+  padding: 8px 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #94a3b8;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Dark mode for GoldenLayout tabs */
+.dark .lm_goldenlayout .lm_header .lm_tab {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  color: #94a3b8;
+}
+
+.lm_goldenlayout .lm_header .lm_tab:hover {
+  background-color: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+/* Dark mode for GoldenLayout tab hover */
+.dark .lm_goldenlayout .lm_header .lm_tab:hover {
+  background-color: #1e293b;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+.lm_goldenlayout .lm_header .lm_tab.lm_active {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #334155;
+  border-bottom: 1px solid #f8fafc;
+  box-shadow: none;
+  padding-bottom: 9px;
+}
+
+/* Dark mode for GoldenLayout active tab */
+.dark .lm_goldenlayout .lm_header .lm_tab.lm_active {
+  background-color: #0D1525;
+  color: #f8fafc;
+  border: 1px solid #1e293b;
+  border-bottom: 1px solid #0D1525;
+}
+
+.lm_goldenlayout .lm_header .lm_tab .lm_title {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding: 2px 0;
+}
+
+/* Make icons in GoldenLayout tabs non-interactive */
+.lm_goldenlayout .lm_header .lm_tab .lm_title svg {
+  pointer-events: none;
+  user-select: none;
+}
+
+.lm_goldenlayout .lm_header .lm_controls {
+  gap: 6px;
+}
+
+/* Ensure content area has clean edges */
+.lm_goldenlayout .lm_content {
+  background-color: #f8fafc;
+}
+
+/* Dark mode for GoldenLayout content */
+.dark .lm_goldenlayout .lm_content {
+  background-color: #0D1525;
+}
+
+/* Make draggable divider clearly visible */
+.lm_goldenlayout .lm_splitter {
+  background-color: #cbd5e1 !important;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.lm_goldenlayout .lm_splitter:hover {
+  opacity: 1;
+  background-color: #94a3b8 !important;
+}
+
+/* Dark mode for GoldenLayout splitter */
+.dark .lm_goldenlayout .lm_splitter {
+  background-color: #1e293b !important;
+  opacity: 0.8;
+}
+
+.dark .lm_goldenlayout .lm_splitter:hover {
+  opacity: 1;
+  background-color: #334155 !important;
+}
+
+/* Remove borders around components; rely on splitters for separation */
+.lm_goldenlayout .lm_item,
+.lm_goldenlayout .lm_stack,
+.lm_goldenlayout .lm_root,
+.lm_goldenlayout .lm_content {
+  border: none !important;
+}
+
+/* Hide all close buttons but keep closable for dragability */
+.lm_goldenlayout .lm_close,
+.lm_goldenlayout .lm_close_tab,
+.lm_goldenlayout .lm_header .lm_tab .lm_close,
+.lm_goldenlayout .lm_controls .lm_close {
+  display: none !important;
+}
+
+/* Render parameter labels in uppercase visually */
+.param-label-upper {
+  text-transform: uppercase;
+}
+
+/* Ensure GoldenLayout tab dropdown is above map overlays */
+.lm_tabdropdown_list {
+  z-index: 10000 !important;
+}
+
+/* Scrollbar styling for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Firefox scrollbar styling for dark mode */
+.dark {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #1e293b;
+}

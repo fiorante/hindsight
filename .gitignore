@@ -1,0 +1,41 @@
+# Environment files — copy .env.example to .env and fill in your values
+.env
+.env.local
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+coverage_html/
+htmlcov/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Source PDS data — downloaded from Zenodo, not committed (see README.md)
+data/
+
+# Generated map tiles and large image assets (populated via Zenodo bundle)
+backend/data/map_tiles/
+backend/data/pdi/*.png
+backend/data/vce/*.png
