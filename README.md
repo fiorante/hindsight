@@ -86,10 +86,13 @@ The dataset is archived on Zenodo (DOI: [`10.5281/zenodo.21094815`](https://doi.
 - Pre-rendered HiRISE orbital map tiles (~690 MB)
 - Post Drive Imagery from front/rear hazcams and navcam (~205 MB)
 - Visual Context Event stereo imagery (~1.5 GB)
+- Mobility system telemetry (pitch, roll, yaw, suspension and differential angles)
+- Motor telemetry for all six drive wheels and four steering actuators
+- Interpolated pose data (position, orientation) and EVR event records
 
-Rover path GeoJSON files and database telemetry are included in this repository.
+Rover path GeoJSON files are included in this repository.
 
-**Note on missing data:** Not all data used in the original system could be released as open source. In particular, rover pose, mobility, and motor telemetry are absent from this release. Features that depend on that data (such as detailed wheel and suspension telemetry charts) will show empty panels.
+**Note on missing data:** A few telemetry channels are unavailable in this release. Terrain classification labels could not be released and are absent — the terrain selector will show no results. `slope` and `velocity` are not present in the available source files and will show empty charts. `heading` was not derived from the available data (`yaw` is present in the mobility telemetry as a directional proxy).
 
 **To re-run ingestion from raw PDS source files**, see `ingestion/README.md` for the expected directory layout. Raw telemetry data for Mars 2020 is publicly available from the [NASA PDS Geosciences Node](https://pds-geosciences.wustl.edu/).
 

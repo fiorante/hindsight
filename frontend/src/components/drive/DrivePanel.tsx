@@ -118,7 +118,7 @@ export const DrivePanel: React.FC<DrivePanelProps> = ({
             const componentType = item.componentType;
             const initialParams = (currentSearchParamsRef.current && currentSearchParamsRef.current.length > 0)
               ? currentSearchParamsRef.current
-              : ['slope', 'tilt'];
+              : ['tilt'];
 
             let newNode: React.ReactNode;
             switch (componentType) {
@@ -366,7 +366,7 @@ export const DrivePanel: React.FC<DrivePanelProps> = ({
     gl.registerComponentFactoryFunction('DriveChartView', (container: any) => {
       const initialParams = (currentSearchParamsRef.current && currentSearchParamsRef.current.length > 0)
         ? currentSearchParamsRef.current
-        : ['slope', 'tilt', 'terrain']
+        : ['tilt']
       const id = mountPortal(container, <DriveChartView driveId={driveId} sol={parseInt(driveId, 10)} initialParameters={initialParams} faults={faults} faultOverlayEnabled={faultOverlayEnabled} />)
 
       // Store portal ID for later updates
