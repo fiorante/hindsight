@@ -364,8 +364,8 @@ if [ "$NEED_INGESTION" = true ]; then
         fi
     done
     
-    # Run ingestion with --clear flag if database was recreated
-    if [ "$CLEAR_DATABASE" = true ] || [ "$FORCE_INGESTION" = true ]; then
+    # Run ingestion with --clear flag if database was recreated or already has data
+    if [ "$CLEAR_DATABASE" = true ] || [ "$FORCE_INGESTION" = true ] || [ "$SOL_COUNT" -gt "0" ]; then
         python ingest.py --clear
     else
         python ingest.py

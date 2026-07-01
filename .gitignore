@@ -33,7 +33,7 @@ dist-ssr/
 .claude/settings.local.json
 
 # Source PDS data — downloaded from Zenodo, not committed (see README.md)
-data/
+/data/
 
 # Generated map tiles and large image assets (populated via Zenodo bundle)
 backend/data/map_tiles/
