@@ -6,6 +6,44 @@ The tool lets operators and researchers explore historical drive data from the M
 
 This repository is a snapshot released for transparency and reproducibility. It is not actively maintained and we are not accepting contributions.
 
+## Citation
+
+If you use Hindsight in your research, please cite both the paper and the software.
+
+**Paper:**
+
+> Luke Fiorante, Leslie Liu, Adam Xu, Xianmei Lei, Darwin Chiu, Krys Blackwood, Maggie Hendrie, Scott Davidoff, Santiago V. Lombeyda, and Hillary Mushkin. "Hindsight: Similarity-Based Analytics for Mars Rover Drive Retrieval." In press for the 2026 IEEE Conference on Visualization (VIS 2026). arXiv:2607.16537.
+
+arXiv preprint: https://doi.org/10.48550/arXiv.2607.16537
+The IEEE Xplore DOI will be added once the paper is published in November 2026.
+
+```bibtex
+@inproceedings{fiorante2026hindsight,
+  title     = {Hindsight: Similarity-Based Analytics for Mars Rover Drive Retrieval},
+  author    = {Fiorante, Luke and Liu, Leslie and Xu, Adam and Lei, Xianmei and Chiu, Darwin and Blackwood, Krys and Hendrie, Maggie and Davidoff, Scott and Lombeyda, Santiago V. and Mushkin, Hillary},
+  booktitle = {Proceedings of the IEEE Conference on Visualization (VIS)},
+  year      = {2026},
+  note      = {In press},
+  doi       = {10.48550/arXiv.2607.16537}
+}
+```
+
+**Software:**
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21115104.svg)](https://doi.org/10.5281/zenodo.21115104)
+
+```bibtex
+@software{fiorante2026hindsight_software,
+  title     = {Hindsight: Similarity-Based Analytics for Mars Rover Drive Retrieval},
+  author    = {Fiorante, Luke and Liu, Leslie and Xu, Adam and Lei, Xianmei and Chiu, Darwin and Blackwood, Krys and Hendrie, Maggie and Davidoff, Scott and Lombeyda, Santiago V. and Mushkin, Hillary},
+  year      = {2026},
+  version   = {1.0.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.21115104},
+  url       = {https://doi.org/10.5281/zenodo.21115104}
+}
+```
+
 ## Development Setup
 
 There are two ways to run the Hindsight platform:
